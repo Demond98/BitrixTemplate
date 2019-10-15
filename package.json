@@ -1,0 +1,40 @@
+{
+	"name": "bitrix",
+	"main": "index.tsx",
+	"scripts": {
+		"tsc": "tsc",
+		"watch": "webpack --mode development --watch",
+		"build": "webpack --mode development",
+		"prod": "del /s /q \".\\dist\\*\" && webpack --mode production && del \"Site.zip\" && \"%programfiles%\\WinRar\\Winrar.exe\" a -r -ed -m1 -ep1 Site.zip dist\\*.*"
+	},
+	"dependencies": {
+		"bootstrap": "^4.3.1",
+		"jquery": "^3.4.1",
+		"popper.js": "^1.15.0",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.6.4",
+		"@babel/core": "^7.6.4",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
+		"@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+		"@babel/preset-env": "^7.6.3",
+		"@babel/preset-react": "^7.6.3",
+		"@babel/preset-typescript": "^7.6.0",
+		"@types/node": "^12.7.12",
+		"@types/react": "^16.9.6",
+		"@types/react-dom": "^16.9.2",
+		"babel-loader": "^8.0.6",
+		"css-loader": "^3.2.0",
+		"html-webpack-plugin": "^3.2.0",
+		"raw-loader": "^3.1.0",
+		"source-map-loader": "^0.2.4",
+		"style-loader": "^1.0.0",
+		"tslint": "^5.20.0",
+		"tslint-immutable": "^6.0.1",
+		"typescript": "^3.6.4",
+		"webpack": "^4.41.1",
+		"webpack-cli": "^3.3.9"
+	}
+}
